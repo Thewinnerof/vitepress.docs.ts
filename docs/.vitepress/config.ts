@@ -10,8 +10,6 @@ export default defineConfig({
 		lineNumbers: true, // 显示代码行数
 	},
 
-	
-
 	vite: {
 		plugins: [AutoSideBar({ collapsed: true })],
 	},
@@ -19,10 +17,28 @@ export default defineConfig({
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
-			{ text: "Home", link: "/" },
-			{ text: "Navigation", link: "/navigation" },
-			{ text: "Web", link: "/Web/" },
-			{ text: "About me", link: "/aboutme" },
+			{ text: "首页", link: "/" },
+			{ text: "快捷导航", link: "/navigation" },
+			{
+				text: "Web",
+				items: [
+					{ text: "在推页面文档", link: "/" },
+
+					{
+						items: [
+							{ text: "Vue3", link: "/item-A1" },
+							{ text: "Ts", link: "/item-A2" },
+						],
+					},
+					{
+						items: [
+							{ text: "Python", link: "/item-B1" },
+							{ text: "Node.js", link: "/item-B2" },
+						],
+					},
+				],
+			},
+			{ text: "关于我", link: "/aboutme" },
 		],
 
 		// 搜索功能
