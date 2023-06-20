@@ -22,11 +22,11 @@ export default defineConfig({
 			{
 				text: "Web",
 				items: [
-					{ text: "在推页面文档", link: "/Web/" },
+					{ text: "大纲", link: "/Web/" },
 
 					{
 						items: [
-							{ text: "Vue3", link: "/item-A1" },
+							{ text: "Vue3", link: "/Web/Vue3相关/" },
 							{ text: "Ts", link: "/item-A2" },
 						],
 					},
