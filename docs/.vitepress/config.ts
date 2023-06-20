@@ -22,7 +22,7 @@ export default defineConfig({
 			{
 				text: "Web",
 				items: [
-					{ text: "在推页面文档", link: "/" },
+					{ text: "在推页面文档", link: "/Web/" },
 
 					{
 						items: [
