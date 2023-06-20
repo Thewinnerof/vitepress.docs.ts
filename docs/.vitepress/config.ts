@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import AutoSideBar from "vite-plugin-vitepress-auto-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,12 +10,16 @@ export default defineConfig({
 		lineNumbers: true, // 显示代码行数
 	},
 
-  
+	vite: {
+		plugins: [AutoSideBar({ collapsed: true })],
+	},
+
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: "Home", link: "/" },
 			{ text: "Examples", link: "/markdown-examples" },
+			{ text: "Vue3", link: "/vuejs/" },
 		],
 
 		// markdown
@@ -33,15 +38,15 @@ export default defineConfig({
 		},
 
 		// 侧边栏
-		sidebar: [
-			{
-				text: "Examples",
-				items: [
-					{ text: "Markdown Examples", link: "/markdown-examples" },
-					{ text: "Runtime API Examples", link: "/api-examples" },
-				],
-			},
-		],
+		// sidebar: [
+		// 	{
+		// 		text: "Examples",
+		// 		items: [
+		// 			{ text: "Markdown Examples", link: "/markdown-examples" },
+		// 			{ text: "Runtime API Examples", link: "/api-examples" },
+		// 		],
+		// 	},
+		// ],
 
 		socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
 	},
