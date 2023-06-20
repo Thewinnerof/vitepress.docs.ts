@@ -19,7 +19,7 @@ export default defineConfig({
 		nav: [
 			{ text: "Home", link: "/" },
 			{ text: "Examples", link: "/markdown-examples" },
-			{ text: "Vue3", link: "/vuejs/" },
+			{ text: "Web", link: "/Web/" },
 		],
 
 		// markdown
