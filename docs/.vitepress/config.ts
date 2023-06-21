@@ -19,6 +19,8 @@ export default defineConfig({
 		plugins: [AutoSideBar({ collapsed: true })],
 	},
 
+	
+
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: navList,
