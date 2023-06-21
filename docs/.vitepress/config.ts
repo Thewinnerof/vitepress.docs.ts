@@ -1,6 +1,9 @@
 import { defineConfig } from "vitepress";
 import AutoSideBar from "vite-plugin-vitepress-auto-sidebar";
 
+// 导航条
+import navList from "./nav";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "Anthony",
@@ -10,43 +13,23 @@ export default defineConfig({
 		lineNumbers: true, // 显示代码行数
 	},
 
+	lastUpdated: true,
+
 	vite: {
 		plugins: [AutoSideBar({ collapsed: true })],
 	},
 
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
-		nav: [
-			{ text: "首页", link: "/" },
-			{ text: "快捷导航", link: "/navigation/" },
-			{
-				text: "Web",
-				items: [
-					{ text: "大纲", link: "/Web/" },
-
-					{
-						items: [
-							{ text: "Vue3", link: "/Web/Vue3相关/" },
-							{ text: "Ts", link: "/item-A2" },
-						],
-					},
-					{
-						items: [
-							{ text: "Python", link: "/item-B1" },
-							{ text: "Node.js", link: "/item-B2" },
-						],
-					},
-				],
-			},
-			{ text: "关于我", link: "/aboutme" },
-		],
+		nav: navList,
 
 		// 搜索功能
 		search: {
 			provider: "local",
 		},
+
 		// 更新时间
-		lastUpdatedText: "更新时间",
+		lastUpdatedText: "Update time",
 
 		footer: {
 			message: "随缘笔记",
