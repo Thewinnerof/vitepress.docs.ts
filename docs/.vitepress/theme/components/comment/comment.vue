@@ -69,7 +69,9 @@ const props = defineProps({
     }
 
 
-    .item:active {
+    .item:active,
+    .item:focus,
+    .item:hover {
       border-bottom-color: red
     }
   }
