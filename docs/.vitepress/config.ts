@@ -18,7 +18,7 @@ export default defineConfig({
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: "首页", link: "/" },
-			{ text: "快捷导航", link: "/navigation" },
+			{ text: "快捷导航", link: "/navigation/" },
 			{
 				text: "Web",
 				items: [
