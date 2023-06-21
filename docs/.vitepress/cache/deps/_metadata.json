@@ -1,23 +1,13 @@
 {
-  "hash": "3c27979f",
-  "browserHash": "60e6e62b",
+  "hash": "9ad8c1d8",
+  "browserHash": "1795d259",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "a62070c2",
+      "fileHash": "5fdd14c4",
       "needsInterop": false
-    },
-    "valine": {
-      "src": "../../../../node_modules/valine/dist/Valine.min.js",
-      "file": "valine.js",
-      "fileHash": "e7115305",
-      "needsInterop": true
     }
   },
-  "chunks": {
-    "chunk-RSJERJUL": {
-      "file": "chunk-RSJERJUL.js"
-    }
-  }
+  "chunks": {}
 }
