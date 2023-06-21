@@ -41,6 +41,11 @@ export default defineConfig({
 			next: "下一页",
 		},
 
+		editLink: {
+			pattern: "https://thewinnerof.github.io/vitepress.docs.ts/",
+			text: "不妥之处，敬请雅正",
+		},
+
 		// 侧边栏
 		// sidebar: [
 		// 	{

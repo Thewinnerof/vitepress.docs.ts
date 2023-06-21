@@ -3,8 +3,8 @@
 
 <item />
 <script setup>
-    import item from "../../components/navList/item.vue"
-    import item1 from "../../components/navList/item1.vue"
+    import item from "../.vitepress/theme/components/navList/item.vue"
+    import item1 from "../.vitepress/theme/components/navList/item1.vue"
 </script>
 
 ## 2. Vue3 相关博客收藏
