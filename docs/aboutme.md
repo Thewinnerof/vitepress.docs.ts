@@ -1,3 +1,17 @@
 ## 关于我
 
-<Comment Username="" :Email="123" :param3="false" />
+::: details
+
+```js{4}
+export default {
+  data () {
+    return {
+      msg: 'Highlighted!'
+    }
+  }
+}
+```
+
+:::
+
+<Comment Username="" :Email="123" :isHidden="true" />
