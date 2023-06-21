@@ -27,4 +27,4 @@ This is an info box.
 
 
 
-<Comment :param1="Hello" :param2="123" :param3="true" />
+<Comment :param3="true" />

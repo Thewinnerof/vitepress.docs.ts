@@ -10,20 +10,21 @@
 const props = defineProps({
   param1: {
     type: String,
-    default: ''
+    default: () => '',
+    require: false,
   },
   param2: {
     type: Number,
-    default: ''
+    default: () => null,
+    requeire: false
   },
   param3: {
     type: Boolean,
-    default: true,
+    default: () => true,
     require: true,
   }
 
 })
-
 
 
 
