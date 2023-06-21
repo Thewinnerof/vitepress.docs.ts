@@ -125,4 +125,33 @@ const props = defineProps({
 
   }
 }
+
+
+
+@media (max-width: 750px) {
+
+  .vite-comments {
+    width: 100%;
+    min-height: 320px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 16px 16px 8px;
+    line-height: 24px;
+    font-size: var(--vp-custom-block-font-size);
+    border-color: var(--vp-c-border);
+
+
+    &-header {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+  }
+
+
+
+}
 </style>
