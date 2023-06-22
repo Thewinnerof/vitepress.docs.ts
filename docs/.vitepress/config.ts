@@ -1,5 +1,8 @@
 import { defineConfig } from "vitepress";
 import AutoSideBar from "vite-plugin-vitepress-auto-sidebar";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 // 导航条
 import navList from "./nav";
@@ -16,7 +19,17 @@ export default defineConfig({
 	lastUpdated: true,
 
 	vite: {
-		plugins: [AutoSideBar({ collapsed: true })],
+		plugins: [
+			AutoSideBar({ collapsed: true }),
+
+			AutoImport({
+				resolvers: [ElementPlusResolver()],
+			}),
+
+			Components({
+				resolvers: [ElementPlusResolver()],
+			}),
+		],
 	},
 
 	themeConfig: {
