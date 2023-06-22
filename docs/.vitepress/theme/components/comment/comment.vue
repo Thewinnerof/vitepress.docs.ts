@@ -38,7 +38,10 @@
             <span class="circle"></span>
             <span class="OSversion">Windows 10</span>
           </div>
-          <div class="vite-info-middle">6/22/2023, 12:23:42 AM</div>
+          <div class="vite-info-middle">
+            <p class="huifu-time">6/22/2023, 12:23:42 AM</p>
+            <p class="click-huifu">回复</p>
+          </div>
         </div>
       </div>
       <div class="vite-info-bottom">

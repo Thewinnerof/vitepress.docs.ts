@@ -130,13 +130,28 @@ $mt-20: 20px;
 
 				&-middle {
 					font-size: 12px;
+					height: 24px !important;
+                    line-height: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+					p {
+						margin: 0;
+                        display: inline-block;
+					}
+
+                    .click-huifu{
+                        color: #ef2f11;
+                        cursor: pointer;
+                    }
 				}
 			}
 		}
 
 		.vite-info-bottom {
 			margin-top: $mt-20;
-            margin-left: 66px;
+			margin-left: 66px;
 		}
 	}
 }
