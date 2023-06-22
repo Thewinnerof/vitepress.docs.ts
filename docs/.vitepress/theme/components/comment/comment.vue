@@ -29,7 +29,7 @@
 
     <div class="Cards">
       <div class="vite-cards">
-        <div class="vite-avatar" style="background-image: url(/comments/avatars/avatar1.png);"></div>
+        <div class="vite-avatar" style="background-image: url(/public/comments/avatars/avatar1.png);"></div>
         <div class="vite-info">
           <div class="vite-info-top">
             <span class="Name">Test测试用户</span>
