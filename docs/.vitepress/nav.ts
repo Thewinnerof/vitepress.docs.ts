@@ -24,7 +24,7 @@ const navList: any = [
       },
     ],
   },
-  { text: "关于我", link: "/aboutme" },
+  { text: "关于我", link: "/Aboutme/index" },
 ];
 
 export default navList;

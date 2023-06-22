@@ -96,7 +96,7 @@ interface UserDataType {
 // 构造假数据
 const userData: UserDataType[] = [
   {
-    avatar: "./comments/avatars/avatar3.png",
+    avatar: "//thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/comments/avatar3.png",
     userName: "奚佳惠",
     region: "河南郑州",
     OS: "Windows 10",
@@ -105,7 +105,7 @@ const userData: UserDataType[] = [
     dianzan: 3,
   },
   {
-    avatar: "./comments/avatars/avatar4.png",
+    avatar: "//thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/comments/avatar4.png",
     userName: "酆晶莹",
     region: "河南洛阳",
     OS: "Windows 11",
@@ -114,7 +114,7 @@ const userData: UserDataType[] = [
     dianzan: 36,
   },
   {
-    avatar: "./comments/avatars/avatar5.png",
+    avatar: "//thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/comments/avatar5.png",
     userName: "云晨璐",
     region: "山西晋城",
     OS: "Windows 10",
@@ -123,7 +123,7 @@ const userData: UserDataType[] = [
     dianzan: 21,
   },
   {
-    avatar: "./comments/avatars/avatar6.png",
+    avatar: "//thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/comments/avatar6.png",
     userName: "平雪瑶",
     region: "上海市",
     OS: "Windows 10",

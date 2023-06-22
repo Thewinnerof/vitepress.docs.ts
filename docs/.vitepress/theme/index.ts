@@ -3,6 +3,8 @@ import { h } from "vue";
 import Theme from "vitepress/theme";
 import "./style.css";
 import Comment_component from "../theme/components/comment/comment.vue";
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
 
 export default {
 	...Theme,
@@ -14,5 +16,6 @@ export default {
 
 	enhanceApp({ app }) {
 		app.component("Comment", Comment_component);
+		app.use(ElementPlus);
 	},
 };
