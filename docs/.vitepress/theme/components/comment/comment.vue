@@ -1,5 +1,6 @@
 <template>
-  <div v-show=" isHidden " class="vite-comments">
+  <!-- 评论编辑器组件 -->
+  <div v-show="isHidden" class="vite-comments">
     <div class="vite-comments-header">
       <div class="item User_input">
         <input type="text" placeholder="昵称">
@@ -19,6 +20,32 @@
         <div class="submit">提交</div>
       </div>
     </div>
+  </div>
+
+
+  <!-- 评论消息 -->
+  <div class="vite-showComments">
+    <div class="top_header">1621评论</div>
+
+    <div class="Cards">
+      <div class="vite-cards">
+        <div class="vite-avatar" style="background-image: url(/comments/avatars/avatar1.png);"></div>
+        <div class="vite-info">
+          <div class="vite-info-top">
+            <span class="Name">Test测试用户</span>
+            <span class="circle"></span>
+            <span class="Posistion">河南·郑州</span>
+            <span class="circle"></span>
+            <span class="OSversion">Windows 10</span>
+          </div>
+          <div class="vite-info-middle">6/22/2023, 12:23:42 AM</div>
+        </div>
+      </div>
+      <div class="vite-info-bottom">
+        <span>Hello World</span>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -47,111 +74,5 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.vite-comments {
-  width: 100%;
-  min-height: 320px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 16px 16px 8px;
-  line-height: 24px;
-  font-size: var(--vp-custom-block-font-size);
-  border-color: var(--vp-c-border);
-
-  &-header {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-
-
-    .item {
-      flex: 1;
-      border-bottom-style: dashed;
-      border-bottom-width: 1px;
-      border-bottom-color: var(--vp-c-border);
-
-      display: flex;
-      align-items: center;
-      justify-content: stretch;
-    }
-
-
-    .item:active,
-    .item:focus,
-    .item:hover {
-      border-bottom-color: red
-    }
-  }
-
-
-  &-body {
-    display: flex;
-    flex-direction: column;
-
-
-    .top {
-      width: 100%;
-      // height: 120px;
-
-      .top_input {
-        width: 100%;
-        height: 210px;
-        max-height: 320px;
-        transition: all .25s ease;
-        padding: 10px 0px;
-      }
-    }
-
-    .bottom {
-      display: flex;
-      flex: 1;
-      justify-content: end;
-
-
-      .submit {
-        width: 60px;
-        height: 30px;
-        font-size: var(--vp-custom-block-font-size);
-        border-color: var(--vp-c-border);
-        line-height: 30px;
-        text-align: center;
-        border-radius: 4px;
-        border-width: 1px;
-        border-style: solid;
-        cursor: pointer;
-      }
-
-    }
-
-  }
-}
-
-
-
-@media (max-width: 750px) {
-
-  .vite-comments {
-    width: 100%;
-    min-height: 320px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 16px 16px 8px;
-    line-height: 24px;
-    font-size: var(--vp-custom-block-font-size);
-    border-color: var(--vp-c-border);
-
-
-    &-header {
-      width: 100%;
-      height: 160px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-  }
-
-
-
-}
+@import "./comment.scss";
 </style>
