@@ -96,7 +96,7 @@ interface UserDataType {
 // 构造假数据
 const userData: UserDataType[] = [
   {
-    avatar: "./public/comments/avatars/avatar3.png",
+    avatar: "./comments/avatars/avatar3.png",
     userName: "奚佳惠",
     region: "河南郑州",
     OS: "Windows 10",
