@@ -40,7 +40,10 @@
           </div>
           <div class="vite-info-middle">
             <p class="huifu-time">6/22/2023, 12:23:42 AM</p>
-            <p class="click-huifu">回复</p>
+            <div class="useful">
+              <div class="click-dianzan">1</div>
+              <div class="click-huifu">回复</div>
+            </div>
           </div>
         </div>
       </div>
