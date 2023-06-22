@@ -25,30 +25,30 @@
 
   <!-- 评论消息 -->
   <div class="vite-showComments">
-    <div class="top_header">1621评论</div>
+    <div class="top_header">{{ CommentsNumber }}条评论</div>
 
-    <div class="Cards">
+    <div class="Cards" v-for="(item, index) in userData" :key="index">
       <div class="vite-cards">
-        <div class="vite-avatar" style="background-image: url(./comments/avatars/avatar1.png);"></div>
+        <div class="vite-avatar" :style="`background-image: url(${item.avatar});`"></div>
         <div class="vite-info">
           <div class="vite-info-top">
-            <span class="Name">Test测试用户</span>
+            <span class="Name">{{ item.userName }}</span>
             <span class="circle"></span>
-            <span class="Posistion">河南·郑州</span>
+            <span class="Posistion">{{ item.region }}</span>
             <span class="circle"></span>
-            <span class="OSversion">Windows 10</span>
+            <span class="OSversion">{{ item.OS }}</span>
           </div>
           <div class="vite-info-middle">
-            <p class="huifu-time">6/22/2023, 12:23:42 AM</p>
+            <p class="huifu-time">{{ item.ReleaseTime }}</p>
             <div class="useful">
-              <div class="click-dianzan">1</div>
+              <div class="click-dianzan">{{ item.dianzan }}</div>
               <div class="click-huifu">回复</div>
             </div>
           </div>
         </div>
       </div>
       <div class="vite-info-bottom">
-        <span>Hello World</span>
+        <span>{{ item.ReleaseContent }}</span>
       </div>
     </div>
 
@@ -56,6 +56,9 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+
+
 const props = defineProps({
   Username: {
     type: String,
@@ -77,6 +80,63 @@ const props = defineProps({
 
 
 
+// 点击回复将会显示评论框
+interface UserDataType {
+  avatar: String,
+  userName: String,
+  region: String,
+  OS: String,
+  ReleaseTime: String,
+  ReleaseContent?: String | null,
+  dianzan?: Number,
+}
+
+
+
+// 构造假数据
+const userData: UserDataType[] = [
+  {
+    avatar: "../../../../public/comments/avatars/avatar3.png",
+    userName: "奚佳惠",
+    region: "河南郑州",
+    OS: "Windows 10",
+    ReleaseTime: "6/22/2023, 12:23:42 AM",
+    ReleaseContent: "这是第一个评论内容",
+    dianzan: 3,
+  },
+  {
+    avatar: "../../../../public/comments/avatars/avatar4.png",
+    userName: "酆晶莹",
+    region: "河南洛阳",
+    OS: "Windows 11",
+    ReleaseTime: "6/22/2023, 12:23:42 AM",
+    ReleaseContent: "这是第二个评论内容",
+    dianzan: 36,
+  },
+  {
+    avatar: "../../../../public/comments/avatars/avatar5.png",
+    userName: "云晨璐",
+    region: "山西晋城",
+    OS: "Windows 10",
+    ReleaseTime: "6/22/2023, 12:23:42 AM",
+    ReleaseContent: "这是第三个评论内容",
+    dianzan: 21,
+  },
+  {
+    avatar: "../../../../public/comments/avatars/avatar6.png",
+    userName: "平雪瑶",
+    region: "上海市",
+    OS: "Windows 10",
+    ReleaseTime: "6/22/2023, 12:23:42 AM",
+    ReleaseContent: "这是第四个评论内容",
+    dianzan: 36,
+  },
+]
+
+
+const CommentsNumber = computed(() => {
+  return userData.length
+})
 </script>
 
 <style lang="scss" scoped>
