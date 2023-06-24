@@ -59,7 +59,7 @@
 import { computed } from 'vue'
 
 
-const props = defineProps({
+const props:any = defineProps({
   Username: {
     type: String,
     default: () => '',

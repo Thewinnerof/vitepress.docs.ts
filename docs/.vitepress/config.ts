@@ -4,72 +4,75 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
+import markdown from "./config/markdown"
 // 导航条
 import navList from "./nav";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	title: "Anthony",
-	description: "This is my Blog",
-	base: "/vitepress.docs.ts/",
-	markdown: {
-		lineNumbers: true, // 显示代码行数
-	},
+  title: "Anthony",
+  description: "This is my Blog",
+  base: "/vitepress.docs.ts/",
 
-	lastUpdated: true,
+  // markdown配置
+  markdown,
 
-	vite: {
-		plugins: [
-			AutoSideBar({ collapsed: true }),
+  lastUpdated: true,
 
-			AutoImport({
-				resolvers: [ElementPlusResolver()],
-			}),
+  vite: {
+    plugins: [
+      AutoSideBar({ collapsed: true }),
 
-			Components({
-				resolvers: [ElementPlusResolver()],
-			}),
-		],
-	},
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
 
-	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
-		nav: navList,
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
+  },
 
-		// 搜索功能
-		search: {
-			provider: "local",
-		},
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    nav: navList,
 
-		// 更新时间
-		lastUpdatedText: "Update time",
+    // 搜索功能
+    search: {
+      provider: "local",
+    },
 
-		footer: {
-			message: "随缘笔记",
-			copyright: "Copyright © 2023-Anthony Blog",
-		},
+    // 更新时间
+    lastUpdatedText: "Update time",
 
-		docFooter: {
-			prev: "上一页",
-			next: "下一页",
-		},
+    footer: {
+      message: "随缘笔记",
+      copyright: "Copyright © 2023-Anthony Blog",
+    },
 
-		editLink: {
-			pattern: "https://thewinnerof.github.io/vitepress.docs.ts/",
-			text: "不妥之处，敬请雅正",
-		},
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
+    },
 
-		// 侧边栏
-		// sidebar: [
-		// 	{
-		// 		text: "Examples",
-		// 		items: [
-		// 			{ text: "Markdown Examples", link: "/markdown-examples" },
-		// 			{ text: "Runtime API Examples", link: "/api-examples" },
-		// 		],
-		// 	},
-		// ],
+    editLink: {
+      pattern: "https://thewinnerof.github.io/vitepress.docs.ts/",
+      text: "不妥之处，敬请雅正",
+    },
 
-		socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
-	},
+    // 侧边栏
+    // sidebar: [
+    // 	{
+    // 		text: "Examples",
+    // 		items: [
+    // 			{ text: "Markdown Examples", link: "/markdown-examples" },
+    // 			{ text: "Runtime API Examples", link: "/api-examples" },
+    // 		],
+    // 	},
+    // ],
+
+    socialLinks: [
+      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+    ],
+  },
 });

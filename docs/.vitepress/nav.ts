@@ -4,7 +4,7 @@ const navList: any = [
   { text: "面试题", link: "/aboutme" },
   { text: "算法&数据结构", link: "/aboutme" },
   { text: "工程化", link: "/aboutme" },
-  { text: "源码", link: "/aboutme" },
+  { text: "源码", link: "/sources/1.本平台相关功能配置/1.自定义全局组件" },
   {
     text: "Web",
     items: [
