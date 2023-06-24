@@ -4,7 +4,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
-import markdown from "./config/markdown"
+import markdown from "./config/markdown";
 // 导航条
 import navList from "./nav";
 
@@ -23,14 +23,16 @@ export default defineConfig({
     plugins: [
       AutoSideBar({ collapsed: true }),
 
-      AutoImport({
-        resolvers: [ElementPlusResolver()],
-      }),
+      // AutoImport({
+      //   resolvers: [ElementPlusResolver()],
+      // }),
 
-      Components({
-        resolvers: [ElementPlusResolver()],
-      }),
+      // Components({
+      //   resolvers: [ElementPlusResolver()],
+      // }),
     ],
+
+
   },
 
   themeConfig: {
