@@ -1,19 +1,42 @@
 <template>
     <div class="container">
         <div class="author">Anthony</div>
-        <div class="time">2022/6/25</div>
+        <div class="time">{{ date }}</div>
         <div class="book_type">
-            <div class="item">Vue3</div>
+            <div class="item" v-for="itemName in ['vue3', 'typescript', 'python']">{{ itemName }}</div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import * as dayjs from 'dayjs'
 
+const date = dayjs().format('YYYY/MM/DD-HH/MM/ss')
+
+
+
+// 透传组件
+interface metaHead {
+    username: String,
+    typeList?: []
+}
+
+// 数据
+const props: metaHead = defineProps({
+    username: {
+        type: String,
+        default: () => "Anthony"
+    },
+
+    typeList: {
+        type: []
+    }
+
+})
 </script>
 
 <style lang="scss" scoped>
-$height: 30px;
+$height: 25px;
 
 .container {
     width: 100%;
@@ -22,7 +45,7 @@ $height: 30px;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    font-size: 14px;
 
     .author {
         min-width: 60px;
@@ -62,12 +85,22 @@ $height: 30px;
         background-repeat: no-repeat;
         background-position-x: 0px;
         background-position-y: center;
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: start;
 
-
-        .item{
-            padding-left: 10px;
-            padding-right: 10px;
-            background-color: #ccc;
+        .item {
+            // padding: 10px;
+            background-color: #34d399;
+            color: #fff;
+            height: inherit;
+            text-align: center;
+            line-height: $height;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 10px;
         }
     }
 }
