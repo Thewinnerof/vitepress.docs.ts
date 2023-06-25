@@ -8,7 +8,7 @@ const markdown: MarkdownOptions = {
 		md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
 			let htmlResult = slf.renderToken(tokens, idx, options);
 			if (tokens[idx].tag === "h1") htmlResult += `\n<ArticleHeader />`;
-      if (tokens[idx].tag === "h5") htmlResult += `\n<Comment />`;
+			if (tokens[idx].tag === "h5") htmlResult += `\n<Comment />`;
 			// if ((tokens[idx].tag = "h9")) htmlResult += `\n<Comment />`;
 			return htmlResult;
 		};

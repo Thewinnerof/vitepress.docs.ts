@@ -1,38 +1,27 @@
 <template>
     <div class="container">
-        <div class="author">Anthony</div>
+        <div class="author">{{ author }}</div>
         <div class="time">{{ date }}</div>
         <div class="book_type">
-            <div class="item" v-for="itemName in ['vue3', 'typescript', 'python']">{{ itemName }}</div>
+            <div class="item" v-for="itemName in tags">{{ itemName }}</div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import * as dayjs from 'dayjs'
+import { useData } from 'vitepress'
+import { reactive, toRefs } from 'vue'
 
-const date = dayjs().format('YYYY/MM/DD-HH/MM/ss')
-
-
-
-// 透传组件
-interface metaHead {
-    username: String,
-    typeList?: []
-}
-
-// 数据
-const props: metaHead = defineProps({
-    username: {
-        type: String,
-        default: () => "Anthony"
-    },
-
-    typeList: {
-        type: []
-    }
-
+const dic = "vue3, app"
+// 初始化文章元数据
+const { frontmatter } = useData()
+const data = reactive({
+    author: frontmatter?.value?.username || 'Anthony',
+    tags: frontmatter?.value?.tag?.split(',') || dic.split(','),
+    date: frontmatter?.value?.createtime || new Date()
 })
+
+const { author, tags, date } = toRefs(data)
 </script>
 
 <style lang="scss" scoped>
@@ -46,6 +35,8 @@ $height: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 14px;
+    
+
 
     .author {
         min-width: 60px;
@@ -62,7 +53,7 @@ $height: 25px;
 
 
     .time {
-        margin-left: 40px;
+        margin-left: $height;
         min-width: 90px;
         padding-left: 30px;
         height: $height;
@@ -72,10 +63,11 @@ $height: 25px;
         background-repeat: no-repeat;
         background-position-x: 0px;
         background-position-y: center;
+        overflow: hidden;
     }
 
     .book_type {
-        margin-left: 40px;
+        margin-left: $height;
         min-width: 90px;
         padding-left: 30px;
         height: $height;
