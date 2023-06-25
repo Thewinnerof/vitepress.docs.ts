@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "element-plus": "^2.3.7",
+    "markdown-it": "^13.0.1",
     "valine": "^1.5.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.5.0"
   }

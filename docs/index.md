@@ -11,14 +11,15 @@ hero:
     alt: Anthony
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Start
+      link: /navigation/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Show more
+      link: /Aboutme/关于我
 
 features:
   - title: Feature A
+    icon: :100
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit

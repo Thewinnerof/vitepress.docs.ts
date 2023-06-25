@@ -1,0 +1,34 @@
+import navList from "./nav";
+
+const themeConfig:any = {
+	// https://vitepress.dev/reference/default-theme-config
+	nav: navList,
+	logo: "/assets/favicon.ico",
+	// 搜索功能
+	search: {
+		provider: "local",
+	},
+	outline: [1, 4],
+	// 更新时间
+	lastUpdatedText: "Update time",
+
+	footer: {
+		message: "随缘笔记",
+		copyright: "Copyright © 2023-Anthony Blog",
+	},
+
+	docFooter: {
+		prev: "上一页",
+		next: "下一页",
+	},
+
+	editLink: {
+		pattern: "https://thewinnerof.github.io/vitepress.docs.ts/",
+		text: "不妥之处，敬请雅正",
+	},
+
+	socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+};
+
+
+export default themeConfig
