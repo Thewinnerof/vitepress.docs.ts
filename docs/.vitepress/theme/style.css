@@ -141,7 +141,6 @@
 	-moz-transition: all 0.9s;
 	-ms-transition: all 0.9s;
 	-o-transition: all 0.9s;
-	color: #fff !important;
 }
 
 .outline-link.active {
