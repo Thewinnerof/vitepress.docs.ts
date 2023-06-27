@@ -19,4 +19,4 @@ https://2401345934.github.io/vite-press-blog/source/vue/component/vue-component-
 //thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts
 
 ### 导航参考
-![image](//thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/other/daohang.png)
+![图片](https://thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/other/daohang.png)
