@@ -18,5 +18,7 @@ https://2401345934.github.io/vite-press-blog/source/vue/component/vue-component-
 ### 图片存放地址
 //thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts
 
-### 导航参考
+### 导航参考  
 ![图片](https://thewinnerof.github.io/Picture-repository/1.vitepress.docs.ts/other/daohang.png)
+
+地址： https://fe-nav.netlify.app/nav/
