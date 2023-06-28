@@ -12,7 +12,7 @@
 import { useData } from 'vitepress'
 import { reactive, toRefs } from 'vue'
 
-const dic = "vue3, app"
+const dic = ""
 // 初始化文章元数据
 const { frontmatter } = useData()
 const data = reactive({
@@ -90,8 +90,8 @@ $height: 25px;
             height: inherit;
             text-align: center;
             line-height: $height;
-            padding-left: 6px;
-            padding-right: 6px;
+            // padding-left: 6px;
+            // padding-right: 6px;
             margin-left: 10px;
         }
     }

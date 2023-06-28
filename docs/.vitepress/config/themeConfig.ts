@@ -1,6 +1,6 @@
 import navList from "./nav";
 
-const themeConfig:any = {
+const themeConfig: any = {
 	// https://vitepress.dev/reference/default-theme-config
 	nav: navList,
 	logo: "/assets/favicon.ico",
@@ -8,7 +8,10 @@ const themeConfig:any = {
 	search: {
 		provider: "local",
 	},
-	outline: [1, 4],
+	outline: {
+		level: "deep",
+		label: "本页目录",
+	},
 	// 更新时间
 	lastUpdatedText: "Update time",
 
@@ -30,5 +33,4 @@ const themeConfig:any = {
 	socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
 };
 
-
-export default themeConfig
+export default themeConfig;
