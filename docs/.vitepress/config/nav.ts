@@ -8,7 +8,7 @@ const navList: any = [
   {
     text: "Web",
     items: [
-      { text: "大纲", link: "/Web//markdown-examples" },
+      { text: "大纲", link: "/Web/markdown-examples" },
 
       {
         items: [
