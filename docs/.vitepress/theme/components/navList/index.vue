@@ -38,34 +38,34 @@ const navData1: DataType[] = [
         describle: "图片在线压缩工具"
     },
     {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
+        url: "https://tool.chinaz.com/tools/base64.aspx",
+        imgUrl: "https://csstools.chinaz.com/tools/images/weixin_chinaz.png",
+        title: "Base64",
+        describle: "base64加解密"
     },
     {
-        url: "",
+        url: "https://beian.miit.gov.cn/#/Integrated/recordQuery",
         imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
+        title: "ICP备案查询",
+        describle: "域名站点备案查询"
     },
     {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
+        url: "https://www.runoob.com/csspack",
+        imgUrl: "https://static.runoob.com/images/favicon.ico",
+        title: "CSS压缩/解压",
+        describle: "CSS代码解/压缩"
     },
     {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
+        url: "http://www.jsons.cn/urlencode",
+        imgUrl: "http://www.jsons.cn/favicon.ico",
+        title: "URL编码/解码",
+        describle: "URLEncode/URLDecode"
     },
     {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
+        url: "https://tool.lu",
+        imgUrl: "https://tool.lu/favicon.ico",
+        title: "在线工具",
+        describle: "开发人员工具箱"
     },
     {
         url: "",
@@ -78,132 +78,5 @@ const navData1: DataType[] = [
 </script>
 
 <style scoped lang="scss">
-.m-nav-links {
-    --m-nav-gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    grid-row-gap: var(--m-nav-gap);
-    grid-column-gap: var(--m-nav-gap);
-    grid-auto-flow: row dense;
-    justify-content: center;
-    margin-top: var(--m-nav-gap);
-
-    p {
-        margin: 0;
-    }
-
-    .m-nav-link {
-        --m-nav-icon-box-size: 40px;
-        --m-nav-icon-size: 24px;
-        --m-nav-box-gap: 12px;
-        display: block;
-        border: 1px solid var(--vp-c-bg-soft);
-        border-radius: 8px;
-        height: 100%;
-        background-color: var(--vp-c-bg-soft);
-        transition: all .25s;
-
-
-        .box {
-            display: flex;
-            flex-direction: column;
-            padding: var(--m-nav-box-gap);
-            height: 100%;
-            color: var(--vp-c-text-1);
-
-
-            &-header {
-                display: flex;
-                align-items: center;
-
-
-                .icon {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-right: calc(var(--m-nav-box-gap) - 2px);
-                    border-radius: 6px;
-                    width: var(--m-nav-icon-box-size);
-                    height: var(--m-nav-icon-box-size);
-                    font-size: var(--m-nav-icon-size);
-                    background-color: var(--vp-c-bg-soft-down);
-                    transition: background-color .25s;
-
-                    img {
-                        border-radius: 4px;
-                        width: var(--m-nav-icon-size);
-                    }
-                }
-
-                .title {
-                    overflow: hidden;
-                    flex-grow: 1;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    line-height: var(--m-nav-icon-box-size);
-                    font-size: 14px;
-                    font-weight: 600;
-                }
-            }
-
-
-            .describle {
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                flex-grow: 1;
-                margin: calc(var(--m-nav-box-gap) - 2px) 0 0;
-                line-height: 1.5;
-                font-size: 12px;
-                color: var(--vp-c-text-2);
-            }
-        }
-    }
-
-    .m-nav-link:hover {
-        box-shadow: var(--vp-shadow-2);
-        border-color: var(--vp-c-brand);
-        text-decoration: initial;
-        background-color: var(--vp-c-bg-soft-up);
-    }
-}
-
-
-@media (min-width: 500px) {
-    .m-nav-links[data-v-2bcff0a9] {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))
-    }
-}
-
-@media (min-width: 640px) {
-    .m-nav-links[data-v-2bcff0a9] {
-        grid-template-columns: repeat(auto-fill, minmax(155px, 1fr))
-    }
-}
-
-@media (min-width: 768px) {
-    .m-nav-links[data-v-2bcff0a9] {
-        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr))
-    }
-}
-
-@media (min-width: 960px) {
-    .m-nav-links[data-v-2bcff0a9] {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
-    }
-}
-
-@media (min-width: 1440px) {
-    .m-nav-links[data-v-2bcff0a9] {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
-    }
-}
-
-@media (min-width: 960px) {
-    .m-nav-links[data-v-2bcff0a9] {
-        --m-nav-gap: 20px
-    }
-}
+@import "./common.scss";
 </style>
