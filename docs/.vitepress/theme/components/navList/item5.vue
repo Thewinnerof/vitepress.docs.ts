@@ -9,7 +9,7 @@
                     </div>
                     <div class="title">{{ navItem.title }}</div>
                 </div>
-                <p class="describle">{{ navItem.describle }}</p>
+                <p class="describle" v-if="navItem.describle.length === 0 ? false : true">{{ navItem.describle }}</p>
             </article>
         </a>
     </div>
@@ -26,52 +26,10 @@ interface DataType {
 
 const navData1: DataType[] = [
     {
-        url: "https://caniuse.com",
-        imgUrl: "https://caniuse.com/img/favicon-128.png",
-        title: "Can I Use",
-        describle: "前端API兼容性查询"
-    },
-    {
-        url: "https://tinypng.com",
-        imgUrl: "https://tinypng.com/images/apple-touch-icon.png",
-        title: "TinyPNG",
-        describle: "图片在线压缩工具"
-    },
-    {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
-    },
-    {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
-    },
-    {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
-    },
-    {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
-    },
-    {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
-    },
-    {
-        url: "",
-        imgUrl: "",
-        title: "坑位",
-        describle: "坑位"
+        url: "https://chat.openai.com/chat",
+        imgUrl: "https://chat.openai.com/favicon-32x32.png",
+        title: "Chat GPT(官网)",
+        describle: ""
     },
 ]
 
